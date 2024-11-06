@@ -20,7 +20,7 @@ jobs:
                   password: ${{ secrets.DOCKERHUB_TOKEN }}
             - # создайте экземпляр build kit builder
                 name: Set up Docker Buildx
-                uses: docker/setup-build-action@v2
+                uses: docker/setup-buildx-action@v2
             - # создайте образ контейнера и отправьте его в Docker Hub с помощью тегaclockbox
                 name: Build and push
                 uses: docker/build-push-action@v4
